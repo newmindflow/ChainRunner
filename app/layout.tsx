@@ -5,6 +5,8 @@ import './globals.css';
 // TODO: Import a Header and Footer component once we create them
 // import Header from '@/components/Header';
 // import Footer from '@/components/Footer';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -29,6 +31,7 @@ export default function RootLayout({
       >
         {/* TODO: Add a <Header /> component here */}
         {/* <Header /> */}
+        <Header />
 
         <main className="flex-grow container mx-auto px-4 py-8">
           {children}
@@ -36,6 +39,7 @@ export default function RootLayout({
 
         {/* TODO: Add a <Footer /> component here */}
         {/* <Footer /> */}
+        <Footer />
       </body>
     </html>
   );
