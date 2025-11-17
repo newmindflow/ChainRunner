@@ -1,0 +1,14 @@
+/*
+ * This file is required to enable Tailwind CSS in a Next.js project.
+ * It imports the core Tailwind styles.
+ */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* You can add custom base styles here */
+body {
+  /* A subtle gradient background can look nice */
+  background-color: #0a0a0a; /* A very dark gray */
+}
