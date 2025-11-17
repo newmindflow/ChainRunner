@@ -1,0 +1,46 @@
+import Link from 'next/link';
+import { Code } from 'lucide-react'; // Icon
+
+/**
+ * This is the main Footer component for the application.
+ * It will appear on every page.
+ */
+export default function Footer() {
+  const currentYear = new Date().getFullYear();
+
+  // TODO: Update with your GitHub repo URL
+  const githubUrl = 'https://github.com/your-github/ChainRunner';
+
+  return (
+    <footer className="w-full bg-gray-900 border-t border-gray-700 mt-12">
+      <div className="container mx-auto px-4 py-8 flex flex-col md:flex-row justify-between items-center">
+        <div className="flex items-center gap-2 mb-4 md:mb-0">
+          <Code className="w-5 h-5 text-blue-400" />
+          <span className="text-md font-semibold text-white">ChainRunner</span>
+        </div>
+
+        <div className="text-sm text-gray-400 mb-4 md:mb-0">
+          &copy; {currentYear} ChainRunner. All rights reserved.
+        </div>
+
+        <div className="flex items-center gap-4">
+          <a
+            href={githubUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sm text-gray-400 hover:text-white"
+          >
+            GitHub
+          </a>
+          {/* TODO: Add a link to the Catalyst proposal or project docs if needed */}
+          <Link
+            href="/about" // Placeholder link
+            className="text-sm text-gray-400 hover:text-white"
+          >
+            About
+          </Link>
+        </div>
+      </div>
+    </footer>
+  );
+}
