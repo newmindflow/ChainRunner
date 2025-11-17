@@ -1,0 +1,65 @@
+'use client';
+
+import Link from 'next/link';
+import { useState } from 'react';
+import { Code, User } from 'lucide-react'; // Icons
+
+/**
+ * This is the main Header component for the application.
+ * It's a Client Component ('use client') because the wallet
+ * connection logic will be interactive.
+ */
+export default function Header() {
+  // TODO: This state will be powered by our wallet library (Lucid/Mesh)
+  const [isConnected, setIsConnected] = useState(false);
+  const [userAddress, setUserAddress] = useState(
+    'addr_test1q...placeholder'
+  );
+
+  const handleConnectWallet = () => {
+    // TODO: Add real wallet connection logic here
+    // For the prototype, we just toggle the state
+    setIsConnected(!isConnected);
+  };
+
+  return (
+    <header className="w-full bg-gray-900 border-b border-gray-700">
+      <nav className="container mx-auto px-4 py-4 flex justify-between items-center">
+        {/* Logo / Home Link */}
+        <Link href="/" className="flex items-center gap-2">
+          <Code className="w-6 h-6 text-blue-400" />
+          <span className="text-xl font-bold text-white">ChainRunner</span>
+        </Link>
+
+        {/* Navigation & Wallet Button */}
+        <div className="flex items-center gap-4">
+          {isConnected ? (
+            // Show Dashboard link and truncated address
+            <div className="flex items-center gap-4">
+              <Link
+                href="/dashboard"
+                className="flex items-center text-sm text-gray-300 hover:text-white"
+              >
+                <User className="w-4 h-4 mr-1" />
+                Dashboard
+              </Link>
+              <div className="bg-gray-800 px-3 py-2 rounded-md text-sm text-gray-300 font-mono">
+                {`${userAddress.substring(0, 6)}...${userAddress.substring(
+                  userAddress.length - 4
+                )}`}
+              </div>
+            </div>
+          ) : (
+            // Show Connect Wallet button
+            <button
+              onClick={handleConnectWallet}
+              className="rounded-md bg-blue-600 px-3.5 py-2 text-sm font-semibold text-white shadow-sm hover:bg-blue-500"
+            >
+              Connect Wallet
+            </button>
+          )}
+        </div>
+      </nav>
+    </header>
+  );
+}components/
