@@ -4,15 +4,15 @@
 
 **ChainRunner** is an open-source, gamified learning RPG for Cardano. Developers learn to build real applications by completing interactive, browser-based "quests" that are verified on-chain.
 
-## **1\. The Problem: A "Great Filter" for Developers**
+## **1\. Eliminating the "Great Filter" for Developers**
 
 Cardano is a powerful platform, but for the global community of JavaScript/TypeScript developers, its learning curve is a "Great Filter."
 
-* **High Barrier to Entry:** The current learning path (Plutus, Haskell) is complex and academic, which is a major deterrent for web developers who just want to *interact* with the blockchain.  
+* **High Barrier to Entry:** Most of the current learning path is complex and academic, which is a major deterrent for web developers who just want to *interact* with the blockchain.  
 * **Lack of an Interactive "On-Ramp":** While video courses (Plutus Pioneers) and static documentation (the Dev Portal) exist, there is no interactive, gamified "sandbox" for Cardano. The ecosystem lacks a "CryptoZombies" or "boot.dev" equivalent that provides an instant, hands-on feedback loop.  
 * **The "Dev Experience" Gap:** Developers want to learn by *doing*, not just by *reading*. They want to write code in their browser, see it work (or fail) instantly, and get rewarded for progress.
 
-## **2\. The Solution: A Gamified Learning RPG**
+## **2\. A Gamified Learning RPG**
 
 **ChainRunner** is not another course. It's an on-chain learning RPG. We provide a fun, engaging, and "sticky" platform that guides a developer from their first wallet connection to minting their first Mainnet asset.
 
@@ -39,9 +39,11 @@ Our initial goal is to build a complete, functional prototype featuring the full
 
 ## **4\. Technical Architecture**
 
-Our architecture is designed to be lean, scalable, and secure. The core logic of the dApp is the **"On-Chain Verification Loop."**
+Our architecture is designed to be lean, scalable, and secure. The core logic of the dApp is the **On-Chain Verification Loop**
 
-$$Link to our full Technical Architecture Diagram on Miro$$  
+<img width="2001" height="1143" alt="image" src="https://github.com/user-attachments/assets/909554e3-ddd8-4942-bbb6-f15ffe43b2f2" />
+
+
 The process is as follows:
 
 1. **User** completes a quest in the **Frontend** (Next.js).  
@@ -49,7 +51,7 @@ The process is as follows:
 3. **Backend** calls a blockchain API (e.g., Koios) to query the user's wallet.  
 4. **Backend** parses the transaction history to confirm the quest's objective (e.g., "NFT with Policy ID X was received").  
 5. If valid, **Backend** updates the **Database** (e.g., Supabase) and grants the user XP.  
-6. **Frontend** shows a "Quest Complete\!" animation.
+6. **Frontend** shows "Quest Complete\!".
 
 ### **Tech Stack**
 
@@ -60,18 +62,18 @@ The process is as follows:
 * **Blockchain APIs:** Koios / Blockfrost  
 * **3rd-Party Integration:** NMKR API/SDK
 
-## **5\. How This Drives On-Chain Impact**
+## **5\. Goal**
 
-The goal of **ChainRunner** is to create a new generation of skilled Cardano builders. This drives on-chain impact in two ways:
+The goal of **ChainRunner** is to attract and create a new generation of skilled Cardano builders.
 
-1. **Directly:** Our learning loop (Quests 3-5) has the potential to generate thousands of **Testnet transactions**, creating a valuable, low-risk environment for experimentation. Quest 6, "Going Live\!," *requires every single user* to submit a **Mainnet transaction** to "graduate."  
-2. **Indirectly (The Ecosystem Multiplier):** Our *real* impact is geometric. By successfully onboarding hundreds of new, qualified developers, we are **catalyzing the creation of the *next* generation of dApps, tools, and protocols** that will drive millions of future transactions.
+Our learning loop (Quests 3-5) has the potential to create a low-risk environment for experimentation. Quest 6, "Going Live\!," *requires every single user* to submit a **Mainnet transaction** to "graduate."  
+By successfully onboarding hundreds of new, qualified developers, we are **catalyzing the creation of the *next* generation of dApps, tools, and protocols** that will drive future transactions.
 
 ## **6\. Project Status & Roadmap**
 
-This project is currently in the **foundational work** phase. We have established our technical architecture, defined our prototype scope, and initialized this repository.
+This project is currently in the **foundational work** phase. We have established our technical architecture and defined our prototype scope.
 
-This README.md serves as our project's "lite whitepaper" and a living document for our vision and roadmap.
+This README.md serves as our project's whitepaper and a living document for our vision and roadmap.
 
 ## **7\. License**
 
